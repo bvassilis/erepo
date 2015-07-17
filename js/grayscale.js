@@ -33,7 +33,7 @@ $('.navbar-collapse ul li a').click(function() {
 $(function(){
     var j=1;
     setInterval(function(){
-        $('.intro').css('background-image', 'url(../img/HP_' + j + '_food_1920x800.jpg)');
+        $('.intro').css('background-image', 'url(./img/HP_' + j + '_food_1920x800.jpg)');
         $('.intro').css('-webkit-transition', 'background 700ms ease-in 200ms');
         $('.intro').css('-moz-transition', 'background 700ms ease-in 200ms');
         $('.intro').css('-o-transition', 'background 700ms ease-in 200ms');

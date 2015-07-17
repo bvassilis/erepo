@@ -22,8 +22,6 @@ h5,
 h6 {
     margin: 0 0 35px;
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 700;
-    letter-spacing: 1px;
 }
 
 p {
@@ -267,28 +265,6 @@ a {
     }
 }
 
-.btn {
-    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-weight: 400;
-    -webkit-transition: all .3s ease-in-out;
-    -moz-transition: all .3s ease-in-out;
-    transition: all .3s ease-in-out;
-    border-radius: 0;
-}
-
-.btn-default {
-    border: 1px solid @primary;
-    color: @primary;
-    background-color: transparent;
-    &:hover,
-    &:focus {
-        border: 1px solid @primary;
-        outline: none;
-        color: black;
-        background-color: @primary;
-    }
-}
-
 ul.banner-social-buttons {
     margin-top: 0;
     @media(max-width:1199px) {
@@ -313,26 +289,12 @@ footer {
     }
 }
 
-::-moz-selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: fade(white, 20%);
-}
-
-::selection {
-    text-shadow: none;
-    background: #fcfcfc;
-    background: fade(white, 20%);
-}
-
-img::selection {
-    background: transparent;
-}
-
-img::-moz-selection {
-    background: transparent;
-}
-
 body {
     webkit-tap-highlight-color: fade(white, 20%);
+}
+
+
+#radioBtn .notActive{
+    color: #3276b1;
+    background-color: #fff;
 }

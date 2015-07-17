@@ -56,7 +56,7 @@
                         <a class="page-scroll" href="#about">How It Works</a>
                     </li>
                     <li>
-                        <a class="page-scroll" href="#download">Download</a>
+                        <a class="page-scroll" href="#download">Sign In</a>
                     </li>
                     <li>
                         <a class="page-scroll" href="#contact">Contact</a>
@@ -74,11 +74,23 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-8 col-md-offset-2">
-                        <!-- h1 class="brand-heading">Grayscale</h1 -->
-                        <h2 class="intro-text">See who delivers in your neighborhood.</h2>
-                        <a href="#about" class="btn btn-circle page-scroll">
-                            <i class="fa fa-angle-double-down animated"></i>
-                        </a>
+                        <h1>See who delivers in your neighborhood.</h2>
+                        <div class="input-group">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default input-lg" type="button"><span class="glyphicon glyphicon-map-marker"></span></button>
+                            </span>
+                            <input type="text" class="form-control input-lg" placeholder="Street Address, City">
+                            <span class="input-group-btn">
+                                <button class="btn btn-default input-lg" type="button"><span class="glyphicon glyphicon-search"></span></button>
+                            </span>
+                        </div>
+                        <div class="input-group">
+                            <div id="radioBtn" class="btn-group">
+                                <a class="btn btn-primary btn-sm active" data-toggle="happy" data-title="D">Delivery</a>
+                                <a class="btn btn-primary btn-sm notActive" data-toggle="happy" data-title="P">Pickup</a>
+                            </div>
+                            <input type="hidden" name="happy" id="happy">
+                        </div>
                     </div>
                 </div>
             </div>

@@ -17,8 +17,6 @@ h5,
 h6 {
   margin: 0 0 35px;
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 700;
-  letter-spacing: 1px;
 }
 p {
   margin: 0 0 25px;
@@ -241,26 +239,6 @@ a:focus {
     margin-top: 250px;
   }
 }
-.btn {
-  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-weight: 400;
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  border-radius: 0;
-}
-.btn-default {
-  border: 1px solid #42dca3;
-  color: #42dca3;
-  background-color: transparent;
-}
-.btn-default:hover,
-.btn-default:focus {
-  border: 1px solid #42dca3;
-  outline: none;
-  color: black;
-  background-color: #42dca3;
-}
 ul.banner-social-buttons {
   margin-top: 0;
 }
@@ -285,22 +263,10 @@ footer {
 footer p {
   margin: 0;
 }
-::-moz-selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-::selection {
-  text-shadow: none;
-  background: #fcfcfc;
-  background: rgba(255, 255, 255, 0.2);
-}
-img::selection {
-  background: transparent;
-}
-img::-moz-selection {
-  background: transparent;
-}
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
+}
+#radioBtn .notActive {
+  color: #3276b1;
+  background-color: #fff;
 }

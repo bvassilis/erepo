@@ -30,7 +30,31 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // rotate background css images
+$(function(){
+    var j=1;
+    setInterval(function(){
+        $('.intro').css('background-image', 'url(../img/HP_' + j + '_food_1920x800.jpg)');
+        $('.intro').css('-webkit-transition', 'background 700ms ease-in 200ms');
+        $('.intro').css('-moz-transition', 'background 700ms ease-in 200ms');
+        $('.intro').css('-o-transition', 'background 700ms ease-in 200ms');
+        $('.intro').css('transition', 'background 700ms ease-in 200ms');
+        j++;
+        if(j>4) {
+            j=1;
+        }
+    }, 5000);
+})
 
+
+// delivery or pickup radio
+$('#radioBtn a').on('click', function(){
+    var sel = $(this).data('title');
+    var tog = $(this).data('toggle');
+    $('#'+tog).prop('value', sel);
+    
+    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+})
 
 // Google Maps Scripts
 // When the window has finished loading create our google map below

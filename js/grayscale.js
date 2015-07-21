@@ -31,18 +31,23 @@ $('.navbar-collapse ul li a').click(function() {
 
 // rotate background css images
 $(function(){
-    var j=1;
+    function changeBackgoundImg(count) {
+        $('.intro').css({'background-image':'url(./img/HP_' + count + '_food_1920x800.jpg)',
+        '-webkit-transition':'all 0.2s ease-in',
+        '-moz-transition':'all 0.2s ease-in',
+        '-ms-transition':'all 0.2s ease-in',
+        '-o-transition':'all 0.2s ease-in',
+        'transition':'all 0.2s ease-in'});
+    }
+    var j = (new Date().getTime() % 4) + 1;
+    changeBackgoundImg(j);
     setInterval(function(){
-        $('.intro').css('background-image', 'url(./img/HP_' + j + '_food_1920x800.jpg)');
-        $('.intro').css('-webkit-transition', 'background 700ms ease-in 200ms');
-        $('.intro').css('-moz-transition', 'background 700ms ease-in 200ms');
-        $('.intro').css('-o-transition', 'background 700ms ease-in 200ms');
-        $('.intro').css('transition', 'background 700ms ease-in 200ms');
         j++;
         if(j>4) {
             j=1;
         }
-    }, 5000);
+        changeBackgoundImg(j);
+    }, 800000);
 })
 
 

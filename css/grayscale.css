@@ -115,8 +115,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/HP_1_food_1920x800.jpg) no-repeat bottom center scroll;
-  background-color: black;
+  background: black no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;

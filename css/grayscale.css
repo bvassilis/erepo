@@ -265,7 +265,19 @@ footer p {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+#radioBtn {
+  overflow: hidden;
+  margin-bottom: 15px;
+}
 #radioBtn .notActive {
   color: #3276b1;
   background-color: #fff;
+}
+.nopadding-left {
+  padding-left: 0 !important;
+  margin-left: 0 !important;
+}
+.nopadding-right {
+  padding-right: 0 !important;
+  margin-right: 0 !important;
 }

@@ -52,7 +52,7 @@ $(function(){
 
 
 // delivery or pickup radio
-$('#radioBtn a').on('click', function(){
+$('.search .options .deliver a').on('click', function(){
     var sel = $(this).data('title');
     var tog = $(this).data('toggle');
     $('#'+tog).prop('value', sel);

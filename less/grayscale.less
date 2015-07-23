@@ -250,10 +250,6 @@ a {
 }
 
 @media(min-width:767px) {
-    .content-section {
-        padding-top: 250px;
-    }
-
     .download-section {
         padding: 100px 0;
     }
@@ -292,13 +288,17 @@ body {
     webkit-tap-highlight-color: fade(white, 20%);
 }
 
-
-#radioBtn {
-    overflow: hidden;
-    margin-bottom: 15px;
-    .notActive{
-        color: #3276b1;
-        background-color: #fff;
+.search {
+    .options {
+        margin-bottom: 0;
+        .deliver, .when-date, .when-hour {
+            overflow: hidden;
+            margin-bottom: 15px;
+            .notActive{
+                color: #3276b1;
+                background-color: #fff;
+            }
+        }
     }
 }
 

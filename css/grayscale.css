@@ -2,8 +2,6 @@ body {
   width: 100%;
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  color: white;
-  background-color: black;
 }
 html {
   width: 100%;
@@ -20,18 +18,16 @@ h6 {
 }
 p {
   margin: 0 0 25px;
-  font-size: 18px;
   line-height: 1.5;
 }
 @media (min-width: 768px) {
   p {
     margin: 0 0 35px;
-    font-size: 20px;
     line-height: 1.6;
   }
 }
 a {
-  color: #42dca3;
+  color: #e82c0c;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -39,16 +35,25 @@ a {
 a:hover,
 a:focus {
   text-decoration: none;
-  color: #1d9b6c;
+  color: #871a07;
 }
 .light {
   font-weight: 400;
 }
+.navbar-toggle {
+  padding: 4px 6px;
+  color: #e82c0c;
+  border-color: #e82c0c;
+}
+.navbar-toggle:focus,
+.navbar-toggle:active {
+  outline: none;
+}
 .navbar-custom {
   margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  background-color: black;
+  background-color: white;
+  border-bottom: 1px solid #e82c0c;
 }
 .navbar-custom .navbar-brand {
   font-weight: 700;
@@ -56,56 +61,42 @@ a:focus {
 .navbar-custom .navbar-brand:focus {
   outline: none;
 }
-.navbar-custom .navbar-brand .navbar-toggle {
-  padding: 4px 6px;
-  font-size: 16px;
-  color: white;
-}
-.navbar-custom .navbar-brand .navbar-toggle:focus,
-.navbar-custom .navbar-brand .navbar-toggle:active {
-  outline: none;
-}
-.navbar-custom a {
-  color: white;
-}
-.navbar-custom .nav li a {
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-.navbar-custom .nav li a:hover {
-  color: rgba(255, 255, 255, 0.8);
-  outline: none;
-  background-color: transparent;
-}
 .navbar-custom .nav li a:focus,
-.navbar-custom .nav li a:active {
-  outline: none;
+.navbar-custom .nav li a:hover {
   background-color: transparent;
 }
 .navbar-custom .nav li.active {
   outline: none;
 }
 .navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.navbar-custom .nav li.active a:hover {
-  color: white;
+  background-color: #fef6f5;
 }
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
     border-bottom: none;
-    background: rgba(0, 0, 0, 0.7);
+    background: rgba(0, 0, 0, 0.2);
     letter-spacing: 1px;
     -webkit-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
+  .navbar-custom a {
+    color: white;
+  }
+  .navbar-custom a:hover {
+    color: #f77963;
+  }
   .navbar-custom.top-nav-collapse {
     padding: 0;
-    background: black;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    background: white;
+    border-bottom: 1px solid #e82c0c;
+  }
+  .navbar-custom.top-nav-collapse a {
+    color: #e82c0c;
+  }
+  .navbar-custom.top-nav-collapse a:hover {
+    color: #871a07;
   }
 }
 .intro {
@@ -142,42 +133,6 @@ a:focus {
   .intro .intro-body .intro-text {
     font-size: 26px;
   }
-}
-.btn-circle {
-  width: 70px;
-  height: 70px;
-  margin-top: 15px;
-  padding: 7px 16px;
-  border: 2px solid white;
-  border-radius: 100% !important;
-  font-size: 40px;
-  color: white;
-  background: transparent;
-  -webkit-transition: background 0.3s ease-in-out;
-  -moz-transition: background 0.3s ease-in-out;
-  transition: background 0.3s ease-in-out;
-}
-.btn-circle:hover,
-.btn-circle:focus {
-  outline: none;
-  color: white;
-  background: rgba(255, 255, 255, 0.1);
-}
-.btn-circle i.animated {
-  -webkit-transition-property: -webkit-transform;
-  -webkit-transition-duration: 1s;
-  -moz-transition-property: -moz-transform;
-  -moz-transition-duration: 1s;
-}
-.btn-circle:hover i.animated {
-  -webkit-animation-name: pulse;
-  -moz-animation-name: pulse;
-  -webkit-animation-duration: 1.5s;
-  -moz-animation-duration: 1.5s;
-  -webkit-animation-iteration-count: infinite;
-  -moz-animation-iteration-count: infinite;
-  -webkit-animation-timing-function: linear;
-  -moz-animation-timing-function: linear;
 }
 @-webkit-keyframes pulse {
   0 {
@@ -227,9 +182,6 @@ a:focus {
   margin-top: 100px;
 }
 @media (min-width: 767px) {
-  .content-section {
-    padding-top: 250px;
-  }
   .download-section {
     padding: 100px 0;
   }
@@ -279,6 +231,7 @@ body {
 .search .options .when-hour .notActive {
   color: #3276b1;
   background-color: #fff;
+  opacity: 0.7;
 }
 .nopadding-left {
   padding-left: 0 !important;

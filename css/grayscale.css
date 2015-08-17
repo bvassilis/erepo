@@ -220,18 +220,21 @@ body {
 .search .options {
   margin-bottom: 0;
 }
-.search .options .deliver,
-.search .options .when-date,
-.search .options .when-hour {
+.search .options .btn-home {
   overflow: hidden;
   margin-bottom: 15px;
+  border-radius: 0;
 }
-.search .options .deliver .notActive,
-.search .options .when-date .notActive,
-.search .options .when-hour .notActive {
-  color: #3276b1;
+.search .options .btn-home.active {
+  color: #fff;
+  background-color: #e82c0c;
+}
+.search .options .btn-home.notActive {
   background-color: #fff;
   opacity: 0.7;
+}
+.search .options .btn-home.notActive:hover {
+  color: #871a07;
 }
 .nopadding-left {
   padding-left: 0 !important;
@@ -240,4 +243,24 @@ body {
 .nopadding-right {
   padding-right: 0 !important;
   margin-right: 0 !important;
+}
+.section-instructions-item {
+  height: 300px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  position: relative;
+}
+.special-instructions-wrap .skew-left {
+  background: #e82c0c;
+}
+.special-instructions-wrap .skew-right {
+  background: #b82309;
+}
+.special-instructions-wrap .section-instructions-content {
+  position: absolute;
+  top: 0;
+}
+#about {
+  background-color: #f6644b;
+  color: white;
 }

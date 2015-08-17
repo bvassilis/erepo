@@ -246,13 +246,20 @@ body {
 .search {
     .options {
         margin-bottom: 0;
-        .deliver, .when-date, .when-hour {
+        .btn-home {
             overflow: hidden;
             margin-bottom: 15px;
-            .notActive{
-                color: #3276b1;
+            border-radius: 0;
+            &.active{
+                color: #fff;
+                background-color: @orange;
+            }
+            &.notActive{
                 background-color: #fff;
                 opacity: 0.7;
+                &:hover {
+                    color: darken(@orange, 20%);
+                }
             }
         }
     }
@@ -266,4 +273,29 @@ body {
 .nopadding-right {
    padding-right: 0 !important;
    margin-right: 0 !important;
+}
+
+.section-instructions-item {
+    height: 300px;
+    margin-bottom: 0;
+    padding-bottom: 0;
+    position: relative;
+}
+
+.special-instructions-wrap .skew-left {
+    background: @yellow;
+}
+
+.special-instructions-wrap .skew-right {
+    background: darken(@yellow, 10%);
+}
+
+.special-instructions-wrap .section-instructions-content {
+    position: absolute;
+    top: 0;
+}
+
+#about {
+    background-color: lighten(@yellow, 15%);
+    color: white;
 }

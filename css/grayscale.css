@@ -163,23 +163,7 @@ a:focus {
   }
 }
 .content-section {
-  padding-top: 100px;
-}
-.download-section {
-  width: 100%;
-  padding: 50px 0;
-  color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-  background-color: black;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  background-size: cover;
-  -o-background-size: cover;
-}
-#map {
-  width: 100%;
-  height: 200px;
-  margin-top: 100px;
+  padding-top: 50px;
 }
 @media (min-width: 767px) {
   .download-section {
@@ -244,23 +228,84 @@ body {
   padding-right: 0 !important;
   margin-right: 0 !important;
 }
-.section-instructions-item {
+#offers a.cuisine {
+  display: block;
+  position: relative;
+  margin-bottom: 30px;
+}
+#offers a.cuisine span {
+  box-shadow: 0 3px 0 0 rgba(50, 50, 50, 0.35);
+  position: absolute;
+  bottom: -20px;
+  left: -55px;
+  z-index: 2;
+  text-align: center;
+  min-width: 110px;
+  height: 40px;
+  display: inline-block;
+  background: #fff;
+  font-size: 16px;
+  line-height: 40px;
+  text-transform: uppercase;
+  margin-left: 50%;
+}
+#offers a.cuisine img {
+  width: 100%;
+}
+#offers .btn-homedark {
+  margin: 20px 0 45px;
+}
+.btn-homedark {
+  color: #fff;
+  background-color: #e82c0c;
+}
+.btn-homedark:focus,
+.btn-homedark:active,
+.btn-homedark:hover {
+  color: #fff;
+  background-color: #871a07;
+}
+#about {
+  background-color: #f6644b;
+  color: white;
+}
+#about .section-instructions-item {
   height: 300px;
   margin-bottom: 0;
   padding-bottom: 0;
   position: relative;
 }
-.special-instructions-wrap .skew-left {
+#about .special-instructions-wrap .skew-left {
   background: #e82c0c;
+  transform: skewY(-5deg);
 }
-.special-instructions-wrap .skew-right {
+#about .special-instructions-wrap .skew-right {
   background: #b82309;
+  transform: skewY(5deg);
 }
-.special-instructions-wrap .section-instructions-content {
+#about .special-instructions-wrap .section-instructions-content {
   position: absolute;
   top: 0;
+  padding: 30px;
 }
-#about {
-  background-color: #f6644b;
-  color: white;
+#about .section-instructions-item-image {
+  height: 90px;
+  width: 100px;
+  background: url('/img/ebf15b36.instructions.svg') 0 0% no-repeat;
+  margin: 0 auto 15px;
+}
+#about .section-instructions-item-image.search {
+  background-position: 66.66% 0;
+}
+#about .section-instructions-item-image.pickr {
+  background-position: 99.99% 0;
+}
+#about .section-instructions-item-image.eatf {
+  background-position: 33.33% 0;
+}
+#suggested {
+  margin-top: 50px;
+}
+#press {
+  margin-top: 50px;
 }

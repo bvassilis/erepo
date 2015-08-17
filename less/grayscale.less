@@ -183,26 +183,9 @@ a {
 }
 
 .content-section {
-    padding-top: 100px;
+    padding-top: 50px;
 }
 
-.download-section {
-    width: 100%;
-    padding: 50px 0;
-    color: white;
-    background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
-    background-color: black;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    background-size: cover;
-    -o-background-size: cover;
-}
-
-#map {
-    width: 100%;
-    height: 200px;
-    margin-top: 100px;
-}
 
 @media(min-width:767px) {
     .download-section {
@@ -275,27 +258,99 @@ body {
    margin-right: 0 !important;
 }
 
-.section-instructions-item {
-    height: 300px;
-    margin-bottom: 0;
-    padding-bottom: 0;
-    position: relative;
+
+// homepage offers / cuisine
+#offers {
+    a.cuisine {
+        display: block;
+        position: relative;
+        margin-bottom: 30px;
+        span {
+            box-shadow: 0 3px 0 0 rgba(50,50,50,.35);
+            position: absolute;
+            bottom: -20px;
+            left: -55px;
+            z-index: 2;
+            text-align: center;
+            min-width: 110px;
+            height: 40px;
+            display: inline-block;
+            background: #fff;
+            font-size: 16px;
+            line-height: 40px;
+            text-transform: uppercase;
+            margin-left: 50%;
+        }
+        img {
+            width: 100%;
+        }
+    }
+    .btn-homedark {
+        margin: 20px 0 45px;
+    }
 }
 
-.special-instructions-wrap .skew-left {
-    background: @yellow;
+.btn-homedark {
+    color: #fff;
+    background-color: @orange;
+    &:focus,
+    &:active,
+    &:hover {
+        color: #fff;
+        background-color: darken(@orange, 20%);
+    }
 }
 
-.special-instructions-wrap .skew-right {
-    background: darken(@yellow, 10%);
-}
 
-.special-instructions-wrap .section-instructions-content {
-    position: absolute;
-    top: 0;
-}
-
+// how it works
 #about {
     background-color: lighten(@yellow, 15%);
     color: white;
+
+    .section-instructions-item {
+        height: 300px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        position: relative;
+    }
+
+    .special-instructions-wrap .skew-left {
+        background: @yellow;
+        transform: skewY(-5deg);
+    }
+
+    .special-instructions-wrap .skew-right {
+        background: darken(@yellow, 10%);
+        transform: skewY(5deg);
+    }
+
+    .special-instructions-wrap .section-instructions-content {
+        position: absolute;
+        top: 0;
+        padding: 30px;
+    }
+
+    .section-instructions-item-image {
+        height: 90px;
+        width: 100px;
+        background: url('/img/ebf15b36.instructions.svg') 0 0/400% no-repeat;
+        margin: 0 auto 15px;
+        &.search {
+            background-position: 66.66% 0;
+        }
+        &.pickr {
+            background-position: 99.99% 0;
+        }
+        &.eatf {
+            background-position: 33.33% 0;
+        }
+    }
+}
+
+#suggested {
+    margin-top: 50px;
+}
+
+#press {
+    margin-top: 50px;
 }

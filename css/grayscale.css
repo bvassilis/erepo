@@ -291,7 +291,7 @@ body {
 #about .section-instructions-item-image {
   height: 90px;
   width: 100px;
-  background: url('img/ebf15b36.instructions.svg') 0 0% no-repeat;
+  background: url('../img/ebf15b36.instructions.svg') 0 0% no-repeat;
   margin: 0 auto 15px;
 }
 #about .section-instructions-item-image.search {

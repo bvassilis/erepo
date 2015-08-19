@@ -86,6 +86,9 @@ a {
                     background-color: lighten(@orange, 50%);
                 }
             }
+            select {
+                color: @orange;
+            }
         }
     }
     @media(min-width:768px) {
@@ -102,6 +105,15 @@ a {
                 color: lighten(@orange, 20%);
             }
         }
+        .nav li select {
+            margin: 8px;
+            background-color: transparent;
+            color: lighten(@orange, 20%);
+            border: 0;
+            option {
+                color: lighten(@orange, 20%);
+            }
+        }
         &.top-nav-collapse {
             padding: 0;
             background: white;
@@ -112,7 +124,17 @@ a {
                     color: darken(@orange, 20%);
                 }
             }
+            .nav li select {
+                color: @orange;
+                border: inherit;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+                option {
+                    color: @orange;
+                }
+            }
         }
+
     }
 }
 

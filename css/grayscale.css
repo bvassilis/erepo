@@ -75,6 +75,9 @@ a:focus {
 .navbar-custom .nav li.active a {
   background-color: #fef6f5;
 }
+.navbar-custom .nav li select {
+  color: #e82c0c;
+}
 @media (min-width: 768px) {
   .navbar-custom {
     padding: 20px 0;
@@ -91,6 +94,15 @@ a:focus {
   .navbar-custom a:hover {
     color: #f77963;
   }
+  .navbar-custom .nav li select {
+    margin: 8px;
+    background-color: transparent;
+    color: #f77963;
+    border: 0;
+  }
+  .navbar-custom .nav li select option {
+    color: #f77963;
+  }
   .navbar-custom.top-nav-collapse {
     padding: 0;
     background: white;
@@ -101,6 +113,15 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse a:hover {
     color: #871a07;
+  }
+  .navbar-custom.top-nav-collapse .nav li select {
+    color: #e82c0c;
+    border: inherit;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  .navbar-custom.top-nav-collapse .nav li select option {
+    color: #e82c0c;
   }
 }
 .intro {

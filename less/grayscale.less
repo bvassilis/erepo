@@ -277,7 +277,7 @@ ul.banner-social-buttons {
 #mobile {
     padding: 50px 0 0;
     text-align: center;
-    background-color: @mobile;
+    background-color: @yellow;
     transform: skewY(2deg);
     p {
         margin: 0;
@@ -376,7 +376,7 @@ body {
 
 // how it works
 #about {
-    background-color: lighten(@yellow, 15%);
+    background-color: lighten(@orange, 15%);
     color: white;
     padding-bottom: 50px;
 
@@ -391,11 +391,11 @@ body {
     }
 
     .special-instructions-wrap .skew-left {
-        background: @yellow;
+        background: @orange;
     }
 
     .special-instructions-wrap .skew-right {
-        background: darken(@yellow, 10%);
+        background: darken(@orange, 10%);
     }
 
     .special-instructions-wrap .section-instructions-content {
@@ -511,4 +511,27 @@ body {
 
 footer {
     margin: 50px 0 0;
+    background: darken(@orange, 10%);
+    padding: 50px 0 0;
+    color: white;
+    font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    a {
+        color: @yellow;
+        &:hover {
+            color: lighten(@orange, 20%);
+        }
+    }
+    .rights {
+        margin-top: 50px;
+        text-align: center;
+        font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+        font-style: italic;
+    }
+    h4 {
+        margin-bottom: 20px;
+    }
+    .footerbox {
+        margin-bottom: 50px;
+    }
+
 }

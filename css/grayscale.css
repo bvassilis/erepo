@@ -473,4 +473,26 @@ body {
 }
 footer {
   margin: 50px 0 0;
+  background: #b82309;
+  padding: 50px 0 0;
+  color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+footer a {
+  color: #f6a71c;
+}
+footer a:hover {
+  color: #f77963;
+}
+footer .rights {
+  margin-top: 50px;
+  text-align: center;
+  font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-style: italic;
+}
+footer h4 {
+  margin-bottom: 20px;
+}
+footer .footerbox {
+  margin-bottom: 50px;
 }

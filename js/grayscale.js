@@ -29,6 +29,11 @@ $('.navbar-collapse ul li a').click(function() {
     $('.navbar-toggle:visible').click();
 });
 
+$(".navbar-toggle").click(function() {
+    $(".navbar-toggle i").toggleClass("fa-bars");
+    $(".navbar-toggle i").toggleClass("fa-times");
+});
+
 // rotate background css images
 $(function(){
     function changeBackgoundImg(count) {

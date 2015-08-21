@@ -173,7 +173,9 @@ a {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    color: white;
+    h1 {
+        color: white;
+    }
     background: black no-repeat bottom center scroll;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -197,7 +199,9 @@ a {
        padding-right: 0;
        margin-right: 0;
     }
-
+    .ui-autocomplete-loading {
+        background: white url("../img/ajax-loader.gif") 98% center no-repeat;
+    }
     @media(min-width:768px) {
         height: 100%;
         padding: 0;
@@ -540,6 +544,29 @@ footer {
     }
     .footerbox {
         margin-bottom: 50px;
+    }
+
+}
+
+#autocomplete-append {
+    position: absolute;
+    text-align: left;
+    font-size: 17px;
+    z-index: 999999;
+    color: @orange;
+    ul.ui-autocomplete {
+        padding: 0;
+
+    }
+    li.ui-menu-item {
+        background-color: white;
+        list-style-type: none;
+        padding: 10px 0px 10px 20px;
+        border: 1px solid grey;
+        &.ui-state-focus {
+            background-color: @orange;
+            color: white;
+        }
     }
 
 }

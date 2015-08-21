@@ -171,12 +171,14 @@ a:focus {
   height: auto;
   padding: 100px 0;
   text-align: center;
-  color: white;
   background: black no-repeat bottom center scroll;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+.intro h1 {
+  color: white;
 }
 .intro .intro-body {
   display: table-cell;
@@ -195,6 +197,9 @@ a:focus {
 .intro .nopadding-right {
   padding-right: 0;
   margin-right: 0;
+}
+.intro .ui-autocomplete-loading {
+  background: white url("../img/ajax-loader.gif") 98% center no-repeat;
 }
 @media (min-width: 768px) {
   .intro {
@@ -506,4 +511,24 @@ footer h4 {
 }
 footer .footerbox {
   margin-bottom: 50px;
+}
+#autocomplete-append {
+  position: absolute;
+  text-align: left;
+  font-size: 17px;
+  z-index: 999999;
+  color: #e82c0c;
+}
+#autocomplete-append ul.ui-autocomplete {
+  padding: 0;
+}
+#autocomplete-append li.ui-menu-item {
+  background-color: white;
+  list-style-type: none;
+  padding: 10px 0px 10px 20px;
+  border: 1px solid grey;
+}
+#autocomplete-append li.ui-menu-item.ui-state-focus {
+  background-color: #e82c0c;
+  color: white;
 }

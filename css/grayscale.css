@@ -165,7 +165,7 @@ a:focus {
 .action-btn:hover {
   color: white;
 }
-.intro {
+header.intro {
   display: table;
   width: 100%;
   height: auto;
@@ -177,42 +177,47 @@ a:focus {
   background-size: cover;
   -o-background-size: cover;
 }
-.intro h1 {
+header.intro h1 {
   color: white;
 }
-.intro .intro-body {
+header.intro .intro-body {
   display: table-cell;
   vertical-align: middle;
 }
-.intro .intro-body .brand-heading {
+header.intro .intro-body .brand-heading {
   font-size: 40px;
 }
-.intro .intro-body .intro-text {
+header.intro .intro-body .intro-text {
   font-size: 18px;
 }
-.intro .nopadding-left {
+header.intro .nopadding-left {
   padding-left: 0;
   margin-left: 0;
 }
-.intro .nopadding-right {
+header.intro .nopadding-right {
   padding-right: 0;
   margin-right: 0;
 }
-.intro .ui-autocomplete-loading {
+header.intro .ui-autocomplete-loading {
   background: white url("../img/ajax-loader.gif") 98% center no-repeat;
 }
 @media (min-width: 768px) {
-  .intro {
-    height: 100%;
+  header.intro {
     padding: 0;
   }
-  .intro h1 {
+  header.intro.home {
+    height: 100%;
+  }
+  header.intro.restaurants {
+    height: 80%;
+  }
+  header.intro h1 {
     margin-top: -10%;
   }
-  .intro .intro-body .brand-heading {
+  header.intro .intro-body .brand-heading {
     font-size: 100px;
   }
-  .intro .intro-body .intro-text {
+  header.intro .intro-body .intro-text {
     font-size: 26px;
   }
 }
@@ -529,6 +534,10 @@ footer .footerbox {
   border: 1px solid grey;
 }
 #autocomplete-append li.ui-menu-item.ui-state-focus {
-  background-color: #e82c0c;
+  background-color: #d68c09;
   color: white;
+}
+#signup .modal-footer,
+#signin .modal-footer {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }

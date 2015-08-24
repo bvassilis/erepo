@@ -34,15 +34,23 @@ $(".navbar-toggle").click(function() {
     $(".navbar-toggle i").toggleClass("fa-times");
 });
 
-// rotate background css images
+// delivery or pickup radio
+$(function(){
+    $('.search .options .deliver a').on('click', function(){
+        var sel = $(this).data('title');
+        var tog = $(this).data('toggle');
+        $('#'+tog).prop('value', sel);
+        
+        $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
+        $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+    });
+});
+
+
+// rotate background homepage css images
 $(function(){
     function changeBackgoundImg(count) {
-        $('.intro').css({'background-image':'url(./img/HP_' + count + '_food_1920x800.jpg)',
-        '-webkit-transition':'all 0.2s ease-in',
-        '-moz-transition':'all 0.2s ease-in',
-        '-ms-transition':'all 0.2s ease-in',
-        '-o-transition':'all 0.2s ease-in',
-        'transition':'all 0.2s ease-in'});
+        $('header.intro.home').css({'background-image':'url(./img/HP_' + count + '_food_1920x800.jpg)'});
     }
     var j = (new Date().getTime() % 4) + 1;
     changeBackgoundImg(j);
@@ -55,13 +63,18 @@ $(function(){
     }, 800000);
 });
 
-
-// delivery or pickup radio
-$('.search .options .deliver a').on('click', function(){
-    var sel = $(this).data('title');
-    var tog = $(this).data('toggle');
-    $('#'+tog).prop('value', sel);
-    
-    $('a[data-toggle="'+tog+'"]').not('[data-title="'+sel+'"]').removeClass('active').addClass('notActive');
-    $('a[data-toggle="'+tog+'"][data-title="'+sel+'"]').removeClass('notActive').addClass('active');
+// rotate background restaurant css images
+$(function(){
+    function changeBackgoundImg(count) {
+        $('header.intro.restaurants').css({'background-image':'url(./img/HP_' + count + '_rest.jpg)'});
+    }
+    var j = (new Date().getTime() % 4) + 1;
+    changeBackgoundImg(j);
+    setInterval(function(){
+        j++;
+        if(j>4) {
+            j=1;
+        }
+        changeBackgoundImg(j);
+    }, 800000);
 });

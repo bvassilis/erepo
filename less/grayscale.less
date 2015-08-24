@@ -167,7 +167,7 @@ a {
     }
 }
 
-.intro {
+header.intro {
     display: table;
     width: 100%;
     height: auto;
@@ -203,7 +203,12 @@ a {
         background: white url("../img/ajax-loader.gif") 98% center no-repeat;
     }
     @media(min-width:768px) {
-        height: 100%;
+        &.home {
+            height: 100%;
+        }
+        &.restaurants {
+            height: 80%;
+        }
         padding: 0;
         h1 {
             margin-top: -10%
@@ -564,9 +569,13 @@ footer {
         padding: 10px 0px 10px 20px;
         border: 1px solid grey;
         &.ui-state-focus {
-            background-color: @orange;
+            background-color: darken(@yellow, 10%);
             color: white;
         }
     }
 
+}
+
+#signup .modal-footer, #signin .modal-footer {
+    font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
 }

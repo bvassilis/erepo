@@ -173,8 +173,13 @@ header.intro {
     height: auto;
     padding: 100px 0;
     text-align: center;
-    h1 {
+    h1, h4 {
         color: white;
+    }
+    &.restaurants {
+        h1, h4 {
+            margin-bottom: 15px;
+        }
     }
     background: black no-repeat bottom center scroll;
     -webkit-background-size: cover;
@@ -578,4 +583,60 @@ footer {
 
 #signup .modal-footer, #signin .modal-footer {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+#whatdo {
+    margin-bottom: 70px;
+    h4 {
+        margin-bottom: 15px;
+    }
+    .points {
+        margin: 35px 0;
+    }
+    span.main-icon {
+        background: url(../img/whatdo.png) no-repeat;
+        width: 60px;
+        height: 40px;
+        display: inline-block;
+        &.icon-about-users {
+            background-position: 0px 0px;
+        }
+        &.icon-hand-shake {
+            background-position: -63px 0px;
+        }
+        &.icon-megaphone {
+            background-position: -123px 0px;
+        }
+        &.icon-free-tag {
+            background-position: 0px -41px;
+        }
+        &.icon-computer-mobile {
+            background-position: -63px -41px;
+        }
+        &.icon-graph {
+            background-position: -123px -41px;
+        }
+    }
+    .website-mockup {
+        background-image: url(/img/7d2dbf5c.mockup-website.png);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        height: 400px;
+    }
+}
+
+#pricing {
+    text-align: center;
+    h1 span {
+        font-size: 15px;
+    }
+    margin: 80px 0;
+    .panel {
+        transition: padding 0.5s;
+        -moz-transition: padding 0.5s; /* Firefox 4 */
+        -webkit-transition: padding 0.5s; /* Safari and Chrome */
+        -o-transition: padding 0.5s; /* Opera */
+        -ms-transition:padding 0.5s; /* IE9 (maybe) */  
+    }
 }

@@ -177,8 +177,13 @@ header.intro {
   background-size: cover;
   -o-background-size: cover;
 }
-header.intro h1 {
+header.intro h1,
+header.intro h4 {
   color: white;
+}
+header.intro.restaurants h1,
+header.intro.restaurants h4 {
+  margin-bottom: 15px;
 }
 header.intro .intro-body {
   display: table-cell;
@@ -540,4 +545,62 @@ footer .footerbox {
 #signup .modal-footer,
 #signin .modal-footer {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#whatdo {
+  margin-bottom: 70px;
+}
+#whatdo h4 {
+  margin-bottom: 15px;
+}
+#whatdo .points {
+  margin: 35px 0;
+}
+#whatdo span.main-icon {
+  background: url(../img/whatdo.png) no-repeat;
+  width: 60px;
+  height: 40px;
+  display: inline-block;
+}
+#whatdo span.main-icon.icon-about-users {
+  background-position: 0px 0px;
+}
+#whatdo span.main-icon.icon-hand-shake {
+  background-position: -63px 0px;
+}
+#whatdo span.main-icon.icon-megaphone {
+  background-position: -123px 0px;
+}
+#whatdo span.main-icon.icon-free-tag {
+  background-position: 0px -41px;
+}
+#whatdo span.main-icon.icon-computer-mobile {
+  background-position: -63px -41px;
+}
+#whatdo span.main-icon.icon-graph {
+  background-position: -123px -41px;
+}
+#whatdo .website-mockup {
+  background-image: url(/img/7d2dbf5c.mockup-website.png);
+  background-position: center center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  height: 400px;
+}
+#pricing {
+  text-align: center;
+  margin: 80px 0;
+}
+#pricing h1 span {
+  font-size: 15px;
+}
+#pricing .panel {
+  transition: padding 0.5s;
+  -moz-transition: padding 0.5s;
+  /* Firefox 4 */
+  -webkit-transition: padding 0.5s;
+  /* Safari and Chrome */
+  -o-transition: padding 0.5s;
+  /* Opera */
+  -ms-transition: padding 0.5s;
+  /* IE9 (maybe) */
 }

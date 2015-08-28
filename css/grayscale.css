@@ -124,6 +124,42 @@ a:focus {
     color: #e82c0c;
   }
 }
+.free-btn {
+  color: white;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding-left: 20px;
+  padding-right: 20px;
+  letter-spacing: 1px;
+  border: 0;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#0ce82c+0,07871a+80,0ce82c+100 */
+  background: #0ce82c;
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiA/Pgo8c3ZnIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgdmlld0JveD0iMCAwIDEgMSIgcHJlc2VydmVBc3BlY3RSYXRpbz0ibm9uZSI+CiAgPGxpbmVhckdyYWRpZW50IGlkPSJncmFkLXVjZ2ctZ2VuZXJhdGVkIiBncmFkaWVudFVuaXRzPSJ1c2VyU3BhY2VPblVzZSIgeDE9IjAlIiB5MT0iMCUiIHgyPSIwJSIgeTI9IjEwMCUiPgogICAgPHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzBjZTgyYyIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjgwJSIgc3RvcC1jb2xvcj0iIzA3ODcxYSIgc3RvcC1vcGFjaXR5PSIxIi8+CiAgICA8c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiMwY2U4MmMiIHN0b3Atb3BhY2l0eT0iMSIvPgogIDwvbGluZWFyR3JhZGllbnQ+CiAgPHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEiIGhlaWdodD0iMSIgZmlsbD0idXJsKCNncmFkLXVjZ2ctZ2VuZXJhdGVkKSIgLz4KPC9zdmc+);
+  background: -moz-linear-gradient(top, #0ce82c 0%, #07871a 80%, #0ce82c 100%);
+  /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #0ce82c), color-stop(80%, #07871a), color-stop(100%, #0ce82c));
+  /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, #0ce82c 0%, #07871a 80%, #0ce82c 100%);
+  /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, #0ce82c 0%, #07871a 80%, #0ce82c 100%);
+  /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, #0ce82c 0%, #07871a 80%, #0ce82c 100%);
+  /* IE10+ */
+  background: linear-gradient(to bottom, #0ce82c 0%, #07871a 80%, #0ce82c 100%);
+  /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#0ce82c', endColorstr='#0ce82c', GradientType=0);
+  /* IE6-8 */
+}
+.free-btn:active:focus,
+.free-btn:focus,
+.free-btn:active {
+  color: white;
+  background: #07871a;
+}
+.free-btn:hover {
+  color: white;
+}
 .search-btn button,
 .action-btn {
   color: white;
@@ -290,6 +326,9 @@ ul.banner-social-buttons {
   background-color: #f6a71c;
   transform: skewY(2deg);
 }
+#mobile.restaurant {
+  transform: skewY(-2deg);
+}
 #mobile p {
   margin: 0;
 }
@@ -420,6 +459,12 @@ body {
   #about .special-instructions-wrap .skew-right {
     transform: skewY(5deg);
   }
+  #about.restaurant .special-instructions-wrap .skew-left {
+    transform: skewY(5deg);
+  }
+  #about.restaurant .special-instructions-wrap .skew-right {
+    transform: skewY(-5deg);
+  }
   #about .nopadding-left {
     padding-left: 0;
     margin-left: 0;
@@ -464,7 +509,7 @@ body {
   background-position: 100% 100%;
 }
 #press {
-  margin: 80px 0 50px;
+  margin: 100px 0 50px;
 }
 #press .social-buttons i {
   border-radius: 2px;
@@ -594,13 +639,25 @@ footer .footerbox {
   font-size: 15px;
 }
 #pricing .panel {
-  transition: padding 0.5s;
-  -moz-transition: padding 0.5s;
-  /* Firefox 4 */
-  -webkit-transition: padding 0.5s;
-  /* Safari and Chrome */
-  -o-transition: padding 0.5s;
-  /* Opera */
-  -ms-transition: padding 0.5s;
-  /* IE9 (maybe) */
+  margin-bottom: 40px;
+}
+#pricing .panel-heading {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+#pricing .panel-heading h3 {
+  margin-top: 35px;
+}
+#pricing .panel-professional {
+  border: 1px solid #07871a;
+}
+#pricing .panel-professional .panel-heading {
+  background-color: #07871a;
+  color: white;
+}
+#pricing .panel-enterprise {
+  border: 1px solid #333;
+}
+#pricing .panel-enterprise .panel-heading {
+  background-color: #333;
+  color: white;
 }

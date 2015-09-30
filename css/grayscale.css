@@ -3,6 +3,9 @@ body {
   height: 100%;
   font-family: "Lora", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+body.common {
+  background-color: #eef2e4;
+}
 html {
   width: 100%;
   height: 100%;
@@ -43,6 +46,14 @@ a:focus {
 .text-bold,
 .text-bold > * {
   font-weight: 700;
+}
+.nopadding-left {
+  padding-left: 0;
+  margin-left: 0;
+}
+.nopadding-right {
+  padding-right: 0;
+  margin-right: 0;
 }
 .navbar-toggle {
   padding: 4px 6px;
@@ -105,22 +116,29 @@ a:focus {
   }
   .navbar-custom.top-nav-collapse {
     padding: 0;
+  }
+  .navbar-custom.top-nav-collapse,
+  .navbar-custom.top-nav-no-collapsed {
     background: white;
     border-bottom: 1px solid #e82c0c;
   }
-  .navbar-custom.top-nav-collapse a {
+  .navbar-custom.top-nav-collapse a,
+  .navbar-custom.top-nav-no-collapsed a {
     color: #e82c0c;
   }
-  .navbar-custom.top-nav-collapse a:hover {
+  .navbar-custom.top-nav-collapse a:hover,
+  .navbar-custom.top-nav-no-collapsed a:hover {
     color: #871a07;
   }
-  .navbar-custom.top-nav-collapse .nav li select {
+  .navbar-custom.top-nav-collapse .nav li select,
+  .navbar-custom.top-nav-no-collapsed .nav li select {
     color: #e82c0c;
     border: inherit;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  .navbar-custom.top-nav-collapse .nav li select option {
+  .navbar-custom.top-nav-collapse .nav li select option,
+  .navbar-custom.top-nav-no-collapsed .nav li select option {
     color: #e82c0c;
   }
 }
@@ -230,14 +248,6 @@ header.intro .intro-body .brand-heading {
 }
 header.intro .intro-body .intro-text {
   font-size: 18px;
-}
-header.intro .nopadding-left {
-  padding-left: 0;
-  margin-left: 0;
-}
-header.intro .nopadding-right {
-  padding-right: 0;
-  margin-right: 0;
 }
 header.intro .ui-autocomplete-loading {
   background: white url("../img/ajax-loader.gif") 98% center no-repeat;
@@ -360,21 +370,43 @@ body {
 .search .options {
   margin-bottom: 0;
 }
-.search .options .btn-home {
-  overflow: hidden;
-  margin-bottom: 15px;
+.search .options select {
   border-radius: 0;
 }
-.search .options .btn-home.active {
+.search .options .service .btn-home {
+  border-radius: 0;
+  border: 0;
+}
+form .service {
+  width: 100%;
+}
+form .service .btn-home {
+  overflow: hidden;
+  margin-bottom: 15px;
+  background-color: #fff;
+  opacity: 0.5;
+  width: 50%;
+  border: 1px solid #333;
+  color: #e82c0c;
+}
+form .service .btn-home:hover {
+  color: #871a07;
+}
+form .service .btn-home.active {
   color: #fff;
   background-color: #e82c0c;
+  opacity: 1;
 }
-.search .options .btn-home.notActive {
-  background-color: #fff;
-  opacity: 0.7;
+form .service .btn-home.active:hover {
+  color: white;
 }
-.search .options .btn-home.notActive:hover {
-  color: #871a07;
+form .service .btn-home.full-width {
+  width: 100%;
+}
+form .service .btn-home.day {
+  width: 14%;
+  padding-left: 0;
+  padding-right: 0;
 }
 #offers a.cuisine {
   display: block;
@@ -660,4 +692,14 @@ footer .footerbox {
 #pricing .panel-enterprise .panel-heading {
   background-color: #333;
   color: white;
+}
+body.common header .row,
+body.common section .row {
+  margin: 50px 0;
+  padding: 50px 0;
+  background-color: #fff;
+  border-radius: 20px;
+}
+header.restaurants-signup h4 {
+  margin: 15px 0 10px;
 }

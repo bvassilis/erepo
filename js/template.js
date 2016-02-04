@@ -12,3 +12,5 @@ function tmpl(dom, find ,replace) {
 function replaceAll(str, find, replace) {
   return str.replace(new RegExp(find, 'g'), replace);
 }
+
+jQuery.ajaxSetup({async:false});

@@ -2,72 +2,36 @@
 <html lang="en">
 
 <head>
+    
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- Template Engine -->
+    <script src="js/template.js"></script>
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <script> 
+        $(function(){
+          $("#head").load("./widget/head.html", function() { replacePdom($(this)) });
+          $("#nav").load("./widget/nav.html", function() { 
+              tmpl($(this), "#{navpos}" , "full-top-trans");
+              replacePdom($(this));
+              $("#nav-links").load("./widget/blank.html", function() { replacePdom($(this)) });
+           });
+          $("#press-adv").load("./widget/press-adv.html", function() { replacePdom($(this));
+              $("#press-adv-links").load("./widget/hungry/press-adv.html", function() { replacePdom($(this)) });
+           });
+          $("#footer").load("./widget/footer.html", function() { replacePdom($(this)) });
+          $("#hungry-login-modals").load("./widget/hungry/login-modals.html", function() { replacePdom($(this)) });
+      });
+    </script> 
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
+    <div id="head"></div>
 
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="#page-top">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="signin" href="#signin" data-toggle="modal">Sign In</a>
-                    </li>
-                    <li>
-                        <select class="form-control">
-                          <option>English</option>
-                          <option>Français</option>
-                          <option>Deutsch</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <div id="nav"> </div>
 
     <!-- Intro Header -->
     <header class="intro home">
@@ -317,184 +281,14 @@
         </div><!-- container -->
     </section>
 
-    <section id="press">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3 section-press-character">
-                    <a class="navbar-brand page-scroll" href="javascript:void(0);">
-                        <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                    </a>
-                </div>
-                <div class="section-press-copy col-xs-12 col-sm-5 col-md-6">
-                    <p class="section-press-p">GrubHub helps you find and order food from wherever you are. How it works: you type in an address, we tell you the restaurants that deliver to that locale as well as showing you droves of pickup restaurants near you. When you find what you're looking for, you can place your order online or by phone, free of charge. Oh, and we also give you access to reviews, coupons, special deals. </p>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="footer-social">
-                        <h3>Follow us!</h3>
-                        <div class="social-buttons">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://instagram.com/"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- sub-foot -->
+    <div id="press-adv"> </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 know-us footerbox">
-                    <h4>Get to know us</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Contact Us</a></li>
-                        <li><a href="javascript:void(0);">FAQ</a></li>
-                        <li><a href="javascript:void(0);">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 business footerbox">
-                    <h4>Business Solutions</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="./restaurants.html">Join Our Restaurant Network</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 share footerbox">
-                    <h4>Share</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">Tell Your Friends</a></li>
-                        <li><a href="javascript:void(0);">Suggest a restaurant</a></li>
-                        <li><a href="javascript:void(0);">Favorite restaurant not found?</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row rights">
-                <div class="">
-                    By using our site you agree to our <a href="javascript:void(0);" class="s-link">Terms of Use</a>. Read our <a href="javascript:void(0);" class="s-link">Privacy Policy</a>. ©2015 .lu, Sarl. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"> </div>
 
     <!-- MODALS -->
-
-    <!-- LOGIN -->
-    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signin-label">Log in to your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Email address</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-6" for="password">Password</label><a class="col-xs-6 forgot-pass" href="#forget-password" data-dismiss="modal" data-toggle="modal">Forgot password?</a>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Log in</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            Don’t have an account? <a href="#signup" data-dismiss="modal" data-toggle="modal">Sign up</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGNUP -->
-    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signup-label">Create your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="name">Your Name</label>
-                    <div class="clearfix"></div>
-                    <div class="col-xs-6">
-                        <input type="text" class="form-control" name="firstname" placeholder="First">
-                    </div>
-                    <div class="col-xs-6">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Email address</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="password">Create a password (6 character minimum)</label>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Create Your Account</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-           Already have an account? <a class="forgot-pass" href="#signin" data-dismiss="modal" data-toggle="modal">Log in here</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESET PASSWORD -->
-    <div class="modal fade" id="forget-password" tabindex="-1" role="dialog" aria-labelledby="forget-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="forget-label">Need to reset your password?</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Enter your email address below</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-                <button type="submit" class="btn btn-primary action-btn">SUBMIT</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <div id="hungry-login-modals"> </div>
 
     <!-- jQuery UI-->
     <script src="js/jquery-ui.min.js"></script>

@@ -90,7 +90,14 @@ a:focus {
   color: #e82c0c;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
+  .navbar-custom .nav li select {
+    margin: 8px;
+    background-color: transparent;
+    border: 0;
+  }
+}
+@media (min-width: 768px) {
+  .navbar-custom.full-top-trans {
     padding: 20px 0;
     border-bottom: none;
     background: rgba(0, 0, 0, 0.2);
@@ -99,46 +106,43 @@ a:focus {
     -moz-transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
     transition: background 0.5s ease-in-out, padding 0.5s ease-in-out;
   }
-  .navbar-custom a {
+  .navbar-custom.full-top-trans a {
     color: white;
   }
-  .navbar-custom a:hover {
+  .navbar-custom.full-top-trans a:hover {
     color: #f77963;
   }
-  .navbar-custom .nav li select {
-    margin: 8px;
-    background-color: transparent;
-    color: #f77963;
-    border: 0;
-  }
-  .navbar-custom .nav li select option {
+  .navbar-custom.full-top-trans .nav li select {
     color: #f77963;
   }
-  .navbar-custom.top-nav-collapse {
+  .navbar-custom.full-top-trans .nav li select option {
+    color: #f77963;
+  }
+  .navbar-custom.full-top-trans.top-nav-collapse {
     padding: 0;
   }
-  .navbar-custom.top-nav-collapse,
-  .navbar-custom.top-nav-no-collapsed {
+  .navbar-custom.full-top-trans.top-nav-collapse,
+  .navbar-custom.full-top-trans.top-nav-no-collapsed {
     background: white;
     border-bottom: 1px solid #e82c0c;
   }
-  .navbar-custom.top-nav-collapse a,
-  .navbar-custom.top-nav-no-collapsed a {
+  .navbar-custom.full-top-trans.top-nav-collapse a,
+  .navbar-custom.full-top-trans.top-nav-no-collapsed a {
     color: #e82c0c;
   }
-  .navbar-custom.top-nav-collapse a:hover,
-  .navbar-custom.top-nav-no-collapsed a:hover {
+  .navbar-custom.full-top-trans.top-nav-collapse a:hover,
+  .navbar-custom.full-top-trans.top-nav-no-collapsed a:hover {
     color: #871a07;
   }
-  .navbar-custom.top-nav-collapse .nav li select,
-  .navbar-custom.top-nav-no-collapsed .nav li select {
+  .navbar-custom.full-top-trans.top-nav-collapse .nav li select,
+  .navbar-custom.full-top-trans.top-nav-no-collapsed .nav li select {
     color: #e82c0c;
     border: inherit;
     border: 1px solid #ccc;
     border-radius: 4px;
   }
-  .navbar-custom.top-nav-collapse .nav li select option,
-  .navbar-custom.top-nav-no-collapsed .nav li select option {
+  .navbar-custom.full-top-trans.top-nav-collapse .nav li select option,
+  .navbar-custom.full-top-trans.top-nav-no-collapsed .nav li select option {
     color: #e82c0c;
   }
 }
@@ -453,7 +457,7 @@ form .service .btn-home.day {
   margin-bottom: 50px;
 }
 #about .section-instructions-item {
-  height: 300px;
+  height: 280px;
   margin-bottom: 0;
   padding-bottom: 0;
   position: relative;
@@ -509,7 +513,7 @@ form .service .btn-home.day {
     padding: 45px;
   }
   #about .section-instructions-item {
-    height: 400px;
+    height: 410px;
   }
 }
 #suggested {
@@ -541,7 +545,7 @@ form .service .btn-home.day {
   background-position: 100% 100%;
 }
 #press {
-  margin: 100px 0 50px;
+  margin: 50px 0 50px;
 }
 #press .social-buttons i {
   border-radius: 2px;
@@ -665,7 +669,7 @@ footer .footerbox {
 }
 #pricing {
   text-align: center;
-  margin: 80px 0;
+  padding: 50px 0 0;
 }
 #pricing h1 span {
   font-size: 15px;
@@ -693,13 +697,8 @@ footer .footerbox {
   background-color: #333;
   color: white;
 }
-body.common header .row,
-body.common section .row {
-  margin: 50px 0;
+body.common header .row {
+  margin: 70px 0 0;
   padding: 50px 0;
   background-color: #fff;
-  border-radius: 20px;
-}
-header.restaurants-signup h4 {
-  margin: 15px 0 10px;
 }

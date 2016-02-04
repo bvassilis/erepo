@@ -1,0 +1,110 @@
+    <!-- LOGIN -->
+    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin-label">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="signin-label">Log in to your account</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-xs-12" for="email">Email address</label>
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-6" for="password">Password</label><a class="col-xs-6 forgot-pass" href="#forget-password" data-dismiss="modal" data-toggle="modal">Forgot password?</a>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary action-btn">Log in</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            Don’t have an account? <a href="#signup" data-dismiss="modal" data-toggle="modal">Sign up</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SIGNUP -->
+    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup-label">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="signup-label">Create your account</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-xs-12" for="name">Your Name</label>
+                    <div class="clearfix"></div>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" name="firstname" placeholder="First">
+                    </div>
+                    <div class="col-xs-6">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="email">Email address</label>
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <label class="col-xs-12" for="password">Create a password (6 character minimum)</label>
+                    <div class="col-xs-12">
+                        <input type="password" class="form-control" name="password" placeholder="Password">
+                    </div>
+                  </div>
+                  <button type="submit" class="btn btn-primary action-btn">Create Your Account</button>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+           Already have an account? <a class="forgot-pass" href="#signin" data-dismiss="modal" data-toggle="modal">Log in here</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RESET PASSWORD -->
+    <div class="modal fade" id="forget-password" tabindex="-1" role="dialog" aria-labelledby="forget-label">
+      <div class="modal-dialog modal-sm" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="forget-label">Need to reset your password?</h4>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <form class="form-horizontal">
+                  <div class="form-group">
+                    <label class="col-xs-12" for="email">Enter your email address below</label>
+                    <div class="col-xs-12">
+                        <input type="email" class="form-control" name="email" placeholder="Email">
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+                <button type="submit" class="btn btn-primary action-btn">SUBMIT</button>
+          </div>
+        </div>
+      </div>
+    </div>

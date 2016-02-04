@@ -3,121 +3,65 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+    <!-- Template Engine -->
+    <script src="js/template.js"></script>
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <script> 
+        $(function(){
+          $("#head").load("./widget/head.html", function() { replacePdom($(this)) });
+          $("#nav").load("./widget/nav.html", function() { 
+              tmpl($(this), "#{navpos}" , "");
+              replacePdom($(this));
+              $("#nav-links").load("./widget/restaurant/nav-front.html", function() { replacePdom($(this)) });
+           });
+          $("#section-whatdo-about").load("./widget/restaurant/section-whatdo-about.html", function() { replacePdom($(this)) });
+          $("#press-adv").load("./widget/press-adv.html", function() { replacePdom($(this));
+              $("#press-adv-links").load("./widget/restaurant/press-adv.html", function() { replacePdom($(this)) });
+           });
+          $("#footer").load("./widget/footer.html", function() { replacePdom($(this)) });
+          $("#hungry-login-modals").load("./widget/hungry/login-modals.html", function() { replacePdom($(this)) });
+        });
+    </script> 
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <div id="head"> </div>
 </head>
 
 <body id="page-top" class="common" data-spy="scroll">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom top-nav-collapse" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="./">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a class="signin" href="#signin" data-toggle="modal">Sign In</a>
-                    </li>
-                    <li>
-                        <select class="form-control">
-                          <option>English</option>
-                          <option>Français</option>
-                          <option>Deutsch</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <div id="nav"> </div>
 
     <!-- Intro Header -->
     <header class="restaurants-signup">
         <div class="container">
             <div class="row">
-                <form class="form-horizontal">
-                <div class="col-sm-8 col-sm-offset-2">
+                <form class="form-horizontal" id="restaurant-register">
+                <div class="col-lg-6">
+                  <h4>1. Restaurant Info</h4> 
+
+                  <div class="col-xs-12">
                   <div class="form-group">
-                    <label class="col-xs-12" for="email">Restaurant Email</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
+                    <label class="control-label" for="name">Restaurant Name*</label>
+                    <input type="text" class="form-control" name="name" placeholder="Restaurant Name" required>
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-6" for="password">Password</label>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
+                    <label class="control-label" for="address">Address*</label>
+                    <input type="text" class="form-control" name="address" placeholder="Address" required>
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12" for="name">Restaurant Name</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="name" placeholder="Restaurant Name">
-                    </div>
+                    <label class="control-label" for="phone">Restaurant Phone*</label>
+                    <input type="text" class="form-control" name="phone" placeholder="Restaurant Phone" required>
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12" for="phone">Restaurant Phone</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="phone" placeholder="Restaurant Phone">
-                    </div>
+                    <label class="control-label" for="email">Restaurant Email</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email">
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12" for="address">Address</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="address" placeholder="Address">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">Mobile Phone</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="mobile" placeholder="Mobile Phone">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">Main Cuisine</label>
-                    <div class="col-xs-12">
-                    <select name="main-cuisine" class="form-control">
+                    <label class="control-label" for="address">Main Cuisine*</label>
+                    <select name="main-cuisine" class="form-control" required>
                         <option value="" selected>Please choose</option>
                         <option value="66" ua-label="Afghan">Afghan</option>
                         <option value="84" ua-label="African Food">African Food</option>
@@ -133,327 +77,102 @@
                         <option value="135" ua-label="Boba">Boba</option>
                         <option value="38" ua-label="Brazilian">Brazilian</option>
                     </select>
-                    </div>
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12" for="second-cuisine">Secondary Cuisine</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="second-cuisine" placeholder="Secondary Cuisine">
-                    </div>
+                    <label class="control-label" for="second-cuisine">Secondary Cuisine</label>
+                    <input type="text" class="form-control" name="second-cuisine" placeholder="Secondary Cuisine">
+                  </div>
+                </div>
+                </div>
+                <div class="col-lg-6">
+                  <h4>Login Details</h4>
+                  <div class="col-xs-12">
+                  <div class="form-group">
+                    <label class="control-label" for="contact-name">Contact Name</label>
+                    <input type="contact-name" class="form-control" name="contact-name" placeholder="Contact Name">
                   </div>
                   <div class="form-group">
-                    <label class="col-xs-12" for="address">I am offering</label>
-                    <div class="col-xs-12">
-                        <div class="btn-group service" data-toggle="buttons">
+                    <label class="control-label" for="email">Email*</label>
+                    <input type="email" class="form-control" name="email" placeholder="Email" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="password">Password*</label>
+                    <input type="password" class="form-control" name="password" placeholder="Password" required>
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="address">Mobile Phone</label>
+                    <input type="text" class="form-control" name="mobile" placeholder="Mobile Phone">
+                  </div>
+                  <div class="form-group">
+                    <label class="control-label" for="address">I am offering</label>
+                    <div class="btn-group service" data-toggle="buttons">
                           <label class="btn btn-home">
                             <input type="checkbox" autocomplete="off"> Delivery
                           </label>
                           <label class="btn btn-home active">
                             <input type="checkbox" autocomplete="off"> Take Away
                           </label>
-                        </div>                    
-                    </div>
+                    </div>                    
                   </div>
-
-                    <h4>Working Hours</h4>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <div class="btn-group service" data-toggle="buttons">
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> MON
-                              </label>
-                              <label class="btn btn-home day active">
-                                <input type="checkbox" autocomplete="off"> TUE
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> WEN
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> THU
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> FRI
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> SAT
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> SUN
-                              </label>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            From:
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            To:
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            From:
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            To:
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from">
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to">
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from" disabled>
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to" disabled>
-                        </div>         
-                    </div>
-                    <div class="form-group">
-                        <label class="col-xs-12 control-label text-center" for="day">Tuesday</label>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from">
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to">
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from">
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to">
-                        </div>                       
-                    </div>
-
-                    <h4>Delivery Hours</h4>
-                    <div class="form-group">
-                        <div class="col-xs-12">
-                            <div class="btn-group service" data-toggle="buttons">
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> MON
-                              </label>
-                              <label class="btn btn-home day ">
-                                <input type="checkbox" autocomplete="off"> TUE
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> WEN
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> THU
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> FRI
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> SAT
-                              </label>
-                              <label class="btn btn-home day">
-                                <input type="checkbox" autocomplete="off"> SUN
-                              </label>
-                            </div>
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from">
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to">
-                        </div>
-                        <div class="col-xs-3 nopadding-right">
-                            <input type="text" class="form-control input-sm" name="from_mon" placeholder="from" disabled>
-                        </div>
-                        <div class="col-xs-3 nopadding-left">
-                            <input type="text" class="form-control input-sm" name="to_mon" placeholder="to" disabled>
-                        </div>         
-                    </div>
                 </div>
-                <div class="col-xs-12">
-                  <button type="submit" class="btn btn-primary action-btn">Create Account</button>
+                </div>                       
+                <div class="col-xs-12 text-center" style="margin: 25px 0 0;">
+                  <button type="submit" class="btn btn-lg btn-primary action-btn">Create Account</button>
                 </div>
             </form>
             </div>
         </div>
     </header>
 
-    <section id="press">
+
+    <div id="section-whatdo-about"> </div>
+
+    <section id="pricing">
         <div class="container">
             <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3 section-press-character">
-                    <a class="navbar-brand page-scroll" href="javascript:void(0);">
-                        <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                    </a>
-                </div>
-                <div class="section-press-copy col-xs-12 col-sm-5 col-md-6">
-                    <p class="section-press-p">Eat24 is the nation's best online ordering network. You will have access to millions of hungry customers that can order daily from your restaurant!
-                        How it works:
-New customers on our sites browse your menu and place an order from their computer or mobile app.
-Once that’s done, our system sends you the order to be made.
-Then deliver it to the customer or they will pick it up. Additionally, you’ll only pay on orders we send you. So, you’ll pay nothing until we deliver results.</p>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="footer-social">
-                        <h3>Follow us!</h3>
-                        <div class="social-buttons">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://instagram.com/"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
+                <div class="col-md-12">
+                        <div class="panel panel-professional">
+                                <div class="panel-heading">
+                                        <h3 class="text-center">PROFESIONAL Pricing <span style="font-size: 15px;"> Pay as you go </span></h3>
+                                </div>
+                                <div class="panel-body text-center">
+                                        
+                                        <p class="lead" style="font-size:30px"> <strong> 9% per-order fee</strong></p>
+                                </div>
+                                <ul class="list-group list-group-flush text-center">
+                                        <li class="list-group-item">
+                                                <span class="glyphicon glyphicon-ok"></span> Accept Unlimited Orders
+                                        </li>
+                                        <li class="list-group-item">
+                                                <span class="glyphicon glyphicon-ok"></span> Manage your Menu, Change it in Ream Time
+                                        </li>
+                                        <li class="list-group-item">
+                                                <span class="glyphicon glyphicon-ok"></span> Easily create offers and discounts
+                                        </li>
+                                        <li class="list-group-item">
+                                                <span class="glyphicon glyphicon-ok"></span> Drive more customers your way 
+                                        </li>
+                                        <li class="list-group-item">
+                                                <span class="glyphicon glyphicon-ok"></span> Free Registration, no setup fees
+                                        </li>
+                                </ul>
+                                
                         </div>
-                    </div>
                 </div>
+                
             </div>
         </div>
     </section>
 
+
+    <!-- sub-foot -->
+    <div id="press-adv"> </div>
+
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 know-us footerbox">
-                    <h4>Get to know us</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Contact Us</a></li>
-                        <li><a href="javascript:void(0);">FAQ</a></li>
-                        <li><a href="javascript:void(0);">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 business footerbox">
-                    <h4>Business Solutions</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="./restaurants.html">Join Our Restaurant Network</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 share footerbox">
-                    <h4>Share</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">Tell Your Friends</a></li>
-                        <li><a href="javascript:void(0);">Suggest a restaurant</a></li>
-                        <li><a href="javascript:void(0);">Favorite restaurant not found?</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row rights">
-                <div class="">
-                    By using our site you agree to our <a href="javascript:void(0);" class="s-link">Terms of Use</a>. Read our <a href="javascript:void(0);" class="s-link">Privacy Policy</a>. ©2015 .lu, Sarl. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"> </div>
 
     <!-- MODALS -->
-
-    <!-- LOGIN -->
-    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signin-label">Log in to your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Email address</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-6" for="password">Password</label><a class="col-xs-6 forgot-pass" href="#forget-password" data-dismiss="modal" data-toggle="modal">Forgot password?</a>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Log in</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            Don’t have an account? <a href="#signup" data-dismiss="modal" data-toggle="modal">Sign up</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGNUP -->
-    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signup-label">Create your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="name">Your Name</label>
-                    <div class="clearfix"></div>
-                    <div class="col-xs-6">
-                        <input type="text" class="form-control" name="firstname" placeholder="First">
-                    </div>
-                    <div class="col-xs-6">
-                        <input type="text" class="form-control" name="lastname" placeholder="Last">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Email address</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="password">Create a password (6 character minimum)</label>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Create Your Account</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-           Already have an account? <a class="forgot-pass" href="#signin" data-dismiss="modal" data-toggle="modal">Log in here</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESET PASSWORD -->
-    <div class="modal fade" id="forget-password" tabindex="-1" role="dialog" aria-labelledby="forget-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="forget-label">Need to reset your password?</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Enter your email address below</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-                <button type="submit" class="btn btn-primary action-btn">SUBMIT</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <div id="hungry-login-modals"> </div>
 
     <!-- jQuery UI-->
     <script src="js/jquery-ui.min.js"></script>
@@ -464,6 +183,9 @@ Then deliver it to the customer or they will pick it up. Additionally, you’ll 
     <!-- Plugin JavaScript -->
     <script src="js/jquery.easing.min.js"></script>
 
+    <!-- jQuery Form Validating -->
+    <script src="js/jquery.validate.min.js"></script>
+
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?sensor=false&v=3.exp&libraries=places"></script>
 
@@ -472,6 +194,11 @@ Then deliver it to the customer or they will pick it up. Additionally, you’ll 
 
     <!-- Geo finder, auto complete -->
     <script src="js/autocomplete.js"></script>
+
+
+    <script>
+    $("#restaurant-register").validate();
+    </script>
 
 </body>
 

@@ -3,74 +3,37 @@
 
 <head>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
+    <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+    
+    <!-- Template Engine -->
+    <script src="js/template.js"></script>
 
-    <title>Grayscale - Start Bootstrap Theme</title>
+    <script> 
+        $(function(){
+          $("#head").load("./widget/head.html", function() { replacePdom($(this)) });
+          $("#nav").load("./widget/nav.html", function() { 
+              tmpl($(this), "#{navpos}" , "full-top-trans");
+              replacePdom($(this));
+              $("#nav-links").load("./widget/restaurant/nav-front.html", function() { replacePdom($(this)) });
+           });
+          $("#section-whatdo-about").load("./widget/restaurant/section-whatdo-about.html", function() { replacePdom($(this)) });
+          $("#section-pricing").load("./widget/restaurant/section-pricing.html", function() { replacePdom($(this)) });
+          $("#press-adv").load("./widget/press-adv.html", function() { replacePdom($(this));
+              $("#press-adv-links").load("./widget/restaurant/press-adv.html", function() { replacePdom($(this)) });
+           });
+          $("#footer").load("./widget/footer.html", function() { replacePdom($(this)) });
+          $("#hungry-login-modals").load("./widget/hungry/login-modals.html", function() { replacePdom($(this)) });
+        });
+    </script> 
 
-    <!-- Bootstrap Core CSS -->
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- Custom CSS -->
-    <link href="css/grayscale.css" rel="stylesheet">
-
-    <!-- Custom Fonts -->
-    <link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
-
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
-
+    <div id="head"> </div>
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
     <!-- Navigation -->
-    <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
-                    <i class="fa fa-bars"></i>
-                </button>
-                <a class="navbar-brand page-scroll" href="./">
-                    <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                </a>
-            </div>
-
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
-                <ul class="nav navbar-nav">
-                    <!-- Hidden li included to remove active class from about link when scrolled up past about section -->
-                    <li class="hidden">
-                        <a href="#page-top"></a>
-                    </li>
-                    <li>
-                        <a class="page-scroll" href="#pricing">Pricing</a>
-                    </li>
-                    <li>
-                        <a class="signin" href="#signin" data-toggle="modal">Sign In</a>
-                    </li>
-                    <li>
-                        <select class="form-control">
-                          <option>English</option>
-                          <option>Français</option>
-                          <option>Deutsch</option>
-                        </select>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
+    <div id="nav"> </div>
 
     <!-- Intro Header -->
     <header class="intro restaurants">
@@ -91,177 +54,10 @@
         </div>
     </header>
 
-    <!-- Section -->
-    <section id="whatdo" class="content-section text-center">
-        <div class="offers-section">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <h3>What We’ll Do For You</h3>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-about-users"></span>
-                        <h4 class="title">Thousands of Users</h4>
-                        <span>
-                            Acquire new, loyal customers from our community of users and followers across social platforms.
-                        </span>
-                    </div>
-                    <div class="clearfix visible-xs-block"></div>
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-computer-mobile"></span>
-                        <h4 class="title">Tools &amp; Tech</h4>
-                        <span>
-                            Conveniently manage your order flow with easy-to-use tools and software. Accept orders through our mobile app, websites.
-                        </span>
-                    </div>
-                    <div class="clearfix visible-sm-block visible-xs-block"></div>
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-megaphone"></span>
-                        <h4 class="title">Marketing &amp; Ads</h4>
-                        <span>
-                            Television, billboards, radio, digital, social media and more, all working to bring you more orders.
-                        </span>
-                    </div>
-                    <div class="clearfix visible-xs-block visible-md-block visible-lg-block"></div>
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-free-tag"></span>
-                        <h4 class="title">Online Marketplace</h4>
-                        <span>
-                            It's free to join, and you only pay for the orders we send you. So, you’ll pay nothing until we deliver results.
-                        </span>
-                    </div>
-                    <div class="clearfix visible-sm-block visible-xs-block"></div>
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-hand-shake"></span>
-                        <h4 class="title">Strategic Partnerships</h4>
-                        <span>
-                            Google, Bing, Yahoo search engines and local partners help drive more customers your way.
-                        </span>
-                    </div>
-                    <div class="clearfix visible-xs-block"></div>
-                    <div class="points col-sm-6 col-md-4">
-                        <span class="main-icon icon-graph"></span>
-                        <h4 class="title">Increase Order Volume</h4>
-                        <span>
-                            Supplement in-store sales with
-                            <br>additional takeout orders.
-                        </span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <div id="section-whatdo-about"> </div>
 
-    <!-- About Section -->
-    <section id="about" class="restaurant">
-        <div class="container content-section text-center">
-        <div class="row">
-            <div class="col-lg-12">
-            <div class="row">
-                <h3 class="section-instructions-title">
-                    <span>What We Bring Your Restaurant!</span>
-                </h3>
-            </div>
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 special-instructions-wrap nopadding-right">
-                    <div class="section-instructions-item skew-left">
-                    </div>
-                    <div class="section-instructions-content">
-                        <h4 class="section-instructions-subtitle">Online Ordering</h4>
-                        <p class="section-instructions-copy">You Accept orders through our mobile app, websites and even your own custom site. How it works:
-New customers find your menu and order.
-EAT24 sends you the order and you make the food.
-Then deliver it to the customer or they will pick it up.</p>
-                    </div>
-                </div>
+    <div id="section-pricing"> </div>
 
-                <div class="col-xs-12 col-sm-4 special-instructions-wrap nopadding-left nopadding-right">
-                    <div class="section-instructions-item skew-right">
-                    </div>
-                    <div class="section-instructions-content">
-                        <h4 class="section-instructions-subtitle">Advertising</h4>
-                        <p class="section-instructions-copy">Television, billboards, radio, digital, social media and more, all working to bring you more orders. Social Media:
-With hundreds of thousands of followers across platforms like Facebook, Twitter, Snapchat and more - we connect directly to potential customers and send them your way.</p>
-                    </div>
-                </div>
-
-                <div class="col-xs-12 col-sm-4 special-instructions-wrap nopadding-left">
-                    <div class="section-instructions-item skew-left">
-                    </div>
-                    <div class="section-instructions-content">
-                        <h4 class="section-instructions-subtitle">Technology</h4>
-                        <p class="section-instructions-copy">Tools will streamline and simplify your transactions and order management. Our order management software will make accepting, updating and organizing your orders easier than ever.
-With our app, your drivers can update customers about their orders and even have new deliveries assigned to them instantly.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        </div>
-    </div>
-    </section>
-
-    <section id="pricing">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12">
-                    <h1 class="text-center">Pricing <span>Pay as you go</span></h1>
-                </div>
-                <div class="clearfix"></div>
-                <div class="col-md-6">
-                        <div class="panel panel-professional">
-                                <div class="panel-heading">
-                                        <h3 class="text-center">PROFESIONAL</h3>
-                                </div>
-                                <div class="panel-body text-center">
-                                        <p class="lead" style="font-size:30px"><strong>8% per-order fee</strong></p>
-                                </div>
-                                <ul class="list-group list-group-flush text-center">
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-ok"></span> Accept Unlimited Orders
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-ok"></span> Manage your Menu, Change it in Ream Time
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-ok"></span> more... make offers, manage orders
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-ok"></span> Free Registration, no setup fees
-                                        </li>
-                                </ul>
-                                <div class="panel-footer"> <a class="btn btn-lg btn-block free-btn" href="./restaurants-signup.html">JOIN </a> </div>
-                        </div>
-                </div>
-                <div class="col-md-6">
-                        <div class="panel panel-enterprise">
-                                <div class="panel-heading">
-                                        <h3 class="text-center">ENTERPRISE</h3>
-                                </div>
-                                <div class="panel-body text-center">
-                                        <p class="lead" style="font-size:30px"><strong>Premium services</strong></p>
-                                </div>
-                                <ul class="list-group list-group-flush text-center">
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-plus"></span> Register your Domain Name
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-plus"></span> Personalize your Website
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-plus"></span> Create your Personalized Mobile Applications
-                                        </li>
-                                        <li class="list-group-item">
-                                                <span class="glyphicon glyphicon-plus"></span> Business Analytics
-                                        </li>
-                                </ul>
-                                <div class="panel-footer"> <a class="btn btn-lg btn-block action-btn" href="javascript:void(0);">CONTACT</a> </div>
-                        </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <section id="mobile" class="restaurant">
          <div class="container">
@@ -287,236 +83,14 @@ With our app, your drivers can update customers about their orders and even have
         </div><!-- container -->
     </section>
 
-    <section id="press">
-        <div class="container">
-            <div class="row">
-                <div class="col-xs-12 col-sm-4 col-md-3 section-press-character">
-                    <a class="navbar-brand page-scroll" href="javascript:void(0);">
-                        <i class="fa fa-play-circle"></i>  <span class="light">Start</span> Bootstrap
-                    </a>
-                </div>
-                <div class="section-press-copy col-xs-12 col-sm-5 col-md-6">
-                    <p class="section-press-p">Eat24 is the nation's best online ordering network. You will have access to millions of hungry customers that can order daily from your restaurant!
-                        How it works:
-New customers on our sites browse your menu and place an order from their computer or mobile app.
-Once that’s done, our system sends you the order to be made.
-Then deliver it to the customer or they will pick it up. Additionally, you’ll only pay on orders we send you. So, you’ll pay nothing until we deliver results.</p>
-                </div>
-                <div class="col-xs-12 col-sm-3">
-                    <div class="footer-social">
-                        <h3>Follow us!</h3>
-                        <div class="social-buttons">
-                            <a target="_blank" rel="nofollow" href="https://www.facebook.com/"><i class="fa fa-facebook"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.twitter.com/"><i class="fa fa-twitter"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://instagram.com/"><i class="fa fa-instagram"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://plus.google.com/"><i class="fa fa-google-plus"></i></a>
-                            <a target="_blank" rel="nofollow" href="https://www.youtube.com/"><i class="fa fa-youtube-play"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <!-- sub-foot -->
+    <div id="press-adv"> </div>
 
     <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-3 know-us footerbox">
-                    <h4>Get to know us</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">About Us</a></li>
-                        <li><a href="javascript:void(0);">Contact Us</a></li>
-                        <li><a href="javascript:void(0);">FAQ</a></li>
-                        <li><a href="javascript:void(0);">Careers</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-6 business footerbox">
-                    <h4>Business Solutions</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">Join Our Restaurant Network</a></li>
-                    </ul>
-                </div>
-                <div class="col-sm-3 share footerbox">
-                    <h4>Share</h4>
-                    <ul class="list-unstyled">
-                        <li><a href="javascript:void(0);">Tell Your Friends</a></li>
-                        <li><a href="javascript:void(0);">Suggest a restaurant</a></li>
-                        <li><a href="javascript:void(0);">Favorite restaurant not found?</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="row rights">
-                <div class="">
-                    By using our site you agree to our <a href="javascript:void(0);" class="s-link">Terms of Use</a>. Read our <a href="javascript:void(0);" class="s-link">Privacy Policy</a>. ©2015 .lu, Sarl. All rights reserved.
-                </div>
-            </div>
-        </div>
-    </footer>
+    <div id="footer"> </div>
 
     <!-- MODALS -->
-
-    <!-- LOGIN -->
-    <div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signin-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signin-label">Log in to your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Email address</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-6" for="password">Password</label><a class="col-xs-6 forgot-pass" href="#forget-password" data-dismiss="modal" data-toggle="modal">Forgot password?</a>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Log in</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-            Don’t have an account? <a href="#signup" data-dismiss="modal" data-toggle="modal">Sign up</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SIGNUP -->
-    <div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signup-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="signup-label">Create your account</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Restaurant Email</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-6" for="password">Password</label>
-                    <div class="col-xs-12">
-                        <input type="password" class="form-control" name="password" placeholder="Password">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="name">Restaurant Name</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="name" placeholder="Restaurant Name">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="phone">Restaurant Phone</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="phone" placeholder="Restaurant Phone">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">Address</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="address" placeholder="Address">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">Mobile Phone</label>
-                    <div class="col-xs-12">
-                        <input type="text" class="form-control" name="mobile" placeholder="Mobile Phone">
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">Main Cuisine</label>
-                    <div class="col-xs-12">
-                    <select name="main-cuisine" class="form-control">
-                        <option value="" selected>Please choose</option>
-                        <option value="66" ua-label="Afghan">Afghan</option>
-                        <option value="84" ua-label="African Food">African Food</option>
-                        <option value="116" ua-label="Alcohol">Alcohol</option>
-                        <option value="7" ua-label="American">American</option>
-                        <option value="76" ua-label="Argentinian">Argentinian</option>
-                        <option value="95" ua-label="Armenian">Armenian</option>
-                        <option value="59" ua-label="Asian Fusion">Asian Fusion</option>
-                        <option value="57" ua-label="BBQ">BBQ</option>
-                        <option value="150" ua-label="Bagels">Bagels</option>
-                        <option value="103" ua-label="Bakery">Bakery</option>
-                        <option value="120" ua-label="Beer">Beer</option>
-                        <option value="135" ua-label="Boba">Boba</option>
-                        <option value="38" ua-label="Brazilian">Brazilian</option>
-                    </select>
-                    </div>
-                  </div>
-                  <div class="form-group">
-                    <label class="col-xs-12" for="address">I am offering</label>
-                    <div class="col-xs-12">
-                        <div class="btn-group service" data-toggle="buttons">
-                          <label class="btn btn-home">
-                            <input type="checkbox" autocomplete="off"> Delivery
-                          </label>
-                          <label class="btn btn-home">
-                            <input type="checkbox" autocomplete="off"> Take Away
-                          </label>
-                        </div>                    
-                    </div>
-                  </div>
-                  <button type="submit" class="btn btn-primary action-btn">Create Account</button>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-           Already have an account? <a class="forgot-pass" href="#signin" data-dismiss="modal" data-toggle="modal">Log in here</a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- RESET PASSWORD -->
-    <div class="modal fade" id="forget-password" tabindex="-1" role="dialog" aria-labelledby="forget-label">
-      <div class="modal-dialog modal-sm" role="document">
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-            <h4 class="modal-title" id="forget-label">Need to reset your password?</h4>
-          </div>
-          <div class="modal-body">
-            <div class="container-fluid">
-              <div class="row">
-                <form class="form-horizontal">
-                  <div class="form-group">
-                    <label class="col-xs-12" for="email">Enter your email address below</label>
-                    <div class="col-xs-12">
-                        <input type="email" class="form-control" name="email" placeholder="Email">
-                    </div>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-          <div class="modal-footer">
-                <button type="submit" class="btn btn-primary action-btn">SUBMIT</button>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <div id="hungry-login-modals"> </div>
 
     <!-- jQuery UI-->
     <script src="js/jquery-ui.min.js"></script>
@@ -535,7 +109,6 @@ Then deliver it to the customer or they will pick it up. Additionally, you’ll 
 
     <!-- Geo finder, auto complete -->
     <script src="js/autocomplete.js"></script>
-
 </body>
 
 </html>

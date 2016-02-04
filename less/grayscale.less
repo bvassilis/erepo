@@ -105,51 +105,57 @@ a {
         }
     }
     @media(min-width:768px) {
-        padding: 20px 0;
-        border-bottom: none;
-        background: rgba(0,0,0,.2);
-        letter-spacing: 1px;
-        -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
-        transition: background .5s ease-in-out,padding .5s ease-in-out;
-        a {
-            color: white;
-            &:hover {
-                color: lighten(@orange, 20%);
-            }
-        }
         .nav li select {
-            margin: 8px;
-            background-color: transparent;
-            color: lighten(@orange, 20%);
-            border: 0;
-            option {
-                color: lighten(@orange, 20%);
+                margin: 8px;
+                background-color: transparent;
+                border: 0;
             }
-        }
-        &.top-nav-collapse {
-            padding: 0;
-        }
-        &.top-nav-collapse, &.top-nav-no-collapsed {
-            background: white;
-            border-bottom: 1px solid @orange;
+    }
+    &.full-top-trans {
+        @media(min-width:768px) {
+            padding: 20px 0;
+            border-bottom: none;
+            background: rgba(0,0,0,.2);
+            letter-spacing: 1px;
+            -webkit-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            -moz-transition: background .5s ease-in-out,padding .5s ease-in-out;
+            transition: background .5s ease-in-out,padding .5s ease-in-out;
             a {
-                color: @orange;
+                color: white;
                 &:hover {
-                    color: darken(@orange, 20%);
+                    color: lighten(@orange, 20%);
                 }
             }
             .nav li select {
-                color: @orange;
-                border: inherit;
-                border: 1px solid #ccc;
-                border-radius: 4px;
+                color: lighten(@orange, 20%);
                 option {
-                    color: @orange;
+                    color: lighten(@orange, 20%);
                 }
             }
-        }
+            &.top-nav-collapse {
+                padding: 0;
+            }
+            &.top-nav-collapse, &.top-nav-no-collapsed {
+                background: white;
+                border-bottom: 1px solid @orange;
+                a {
+                    color: @orange;
+                    &:hover {
+                        color: darken(@orange, 20%);
+                    }
+                }
+                .nav li select {
+                    color: @orange;
+                    border: inherit;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    option {
+                        color: @orange;
+                    }
+                }
+            }
 
+        }
     }
 }
 
@@ -468,7 +474,7 @@ form .service {
         margin-bottom: 50px;
     }
     .section-instructions-item {
-        height: 300px;
+        height: 280px;
         margin-bottom: 0;
         padding-bottom: 0;
         position: relative;
@@ -531,7 +537,7 @@ form .service {
             padding: 45px;
         }
         .section-instructions-item {
-            height: 400px;
+            height: 410px;
         }
     }
 }
@@ -567,7 +573,7 @@ form .service {
 }
 
 #press {
-    margin: 100px 0 50px;
+    margin: 50px 0 50px;
     .social-buttons i {
         border-radius: 2px;
         width: 38px;
@@ -701,7 +707,7 @@ footer {
     h1 span {
         font-size: 15px;
     }
-    margin: 80px 0;
+    padding: 50px 0 0;
     .panel {
         margin-bottom: 40px;
     }
@@ -727,15 +733,12 @@ footer {
     }
 }
 
-body.common header .row, body.common section .row {
-    margin: 50px 0;
+body.common header .row {
+    margin: 70px 0 0;
     padding: 50px 0;
     background-color: #fff;
-    border-radius: 20px;
 }
 
 header.restaurants-signup {
-    h4 {
-        margin: 15px 0 10px;
-    }
+ 
 }

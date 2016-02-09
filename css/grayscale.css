@@ -40,6 +40,39 @@ a:focus {
   text-decoration: none;
   color: #871a07;
 }
+a.logo {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 100;
+  letter-spacing: -4px;
+  font-size: 30px;
+}
+a.logo i {
+  font-style: normal;
+}
+a.logo i.blue {
+  color: #4285f4;
+}
+a.logo i.orange {
+  color: #e82c0c;
+}
+a.logo i.yellow {
+  color: #f6a71c;
+}
+a.logo i.green {
+  color: #34a853;
+}
+a.logo:hover i.blue {
+  color: #1266f1;
+}
+a.logo:hover i.orange {
+  color: #b82309;
+}
+a.logo:hover i.yellow {
+  color: #d68c09;
+}
+a.logo:hover i.green {
+  color: #288140;
+}
 .light {
   font-weight: 400;
 }
@@ -69,12 +102,6 @@ a:focus {
   font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
   background-color: white;
   border-bottom: 1px solid #e82c0c;
-}
-.navbar-custom .navbar-brand {
-  font-weight: 700;
-}
-.navbar-custom .navbar-brand:focus {
-  outline: none;
 }
 .navbar-custom .nav li a:focus,
 .navbar-custom .nav li a:hover {
@@ -177,7 +204,7 @@ a:focus {
 .free-btn:focus,
 .free-btn:active {
   color: white;
-  background: #07871a;
+  background: #1c5a2d;
 }
 .free-btn:hover {
   color: white;
@@ -684,10 +711,10 @@ footer .footerbox {
   margin-top: 35px;
 }
 #pricing .panel-professional {
-  border: 1px solid #07871a;
+  border: 1px solid #1c5a2d;
 }
 #pricing .panel-professional .panel-heading {
-  background-color: #07871a;
+  background-color: #1c5a2d;
   color: white;
 }
 #pricing .panel-enterprise {

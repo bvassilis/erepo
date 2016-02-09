@@ -45,6 +45,44 @@ a {
         text-decoration: none;
         color: darken(@orange, 20%);
     }
+
+    &.logo {
+        font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
+        font-weight: 100;
+        letter-spacing: -4px;
+        font-size: 30px;
+        i {
+            font-style: normal;
+            &.blue {
+                color:@blue;
+            }
+            &.orange {
+                color:@orange;
+            }
+            &.yellow {
+                color:@yellow;
+            }
+            &.green {
+                color:@green;
+            }
+        }
+        &:hover {
+            i {
+                &.blue {
+                    color: darken(@blue, 10%);
+                }
+                &.orange {
+                    color: darken(@orange, 10%);
+                }
+                &.yellow {
+                    color: darken(@yellow, 10%);
+                }
+                &.green {
+                    color: darken(@green, 10%);
+                }
+            }
+        }
+    }
 }
 
 .light {
@@ -79,12 +117,6 @@ a {
     font-family: "Montserrat","Helvetica Neue",Helvetica,Arial,sans-serif;
     background-color: white;
     border-bottom: 1px solid @orange;
-    .navbar-brand {
-        font-weight: 700;
-        &:focus {
-            outline: none;
-        }
-    }
     .nav {
         li {
             a {

@@ -27,6 +27,7 @@
     </script> 
 
     <div id="head"> </div>
+
 </head>
 
 <body id="page-top" class="common" data-spy="scroll">
@@ -49,7 +50,16 @@
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="address">Address*</label>
-                    <input type="text" class="form-control" name="address" placeholder="Address" required>
+                    <input type="text" class="form-control address_auto ui-autocomplete-input" name="address" id="address" autocomplete="off" placeholder="Street Address, City" required>
+                    <div id="autocomplete-append"> </div>
+                    <!-- hide info -->
+                    <input id="numero" type="hidden" value="" name="numero">
+                    <input id="street" type="hidden" value="" name="street">
+                    <input id="city" type="hidden" value="" name="city">
+                    <input id="postal" type="hidden" value="" name="postal">
+                    <input id="country" type="hidden" value="" name="country">
+                    <input id="lat" type="hidden" value="" name="lat">
+                    <input id="lng" type="hidden" value="" name="lng">
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="phone">Restaurant Phone*</label>
@@ -57,7 +67,7 @@
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="email">Restaurant Email</label>
-                    <input type="email" class="form-control" name="email" placeholder="Email">
+                    <input type="email" class="form-control" name="restaurant-email" placeholder="Email">
                   </div>
                   <div class="form-group">
                     <label class="control-label" for="address">Main Cuisine*</label>
@@ -79,8 +89,22 @@
                     </select>
                   </div>
                   <div class="form-group">
-                    <label class="control-label" for="second-cuisine">Secondary Cuisine</label>
-                    <input type="text" class="form-control" name="second-cuisine" placeholder="Secondary Cuisine">
+                    <label class="control-label" for="second-cuisine">Secondary Cuisines (5 max)</label>
+                      <select multiple="multiple" id="cuisines" name="cuisines">
+                        <option value="66" ua-label="Afghan">Afghan</option>
+                        <option value="84" ua-label="African Food">African Food</option>
+                        <option value="116" ua-label="Alcohol">Alcohol</option>
+                        <option value="7" ua-label="American">American</option>
+                        <option value="76" ua-label="Argentinian">Argentinian</option>
+                        <option value="95" ua-label="Armenian">Armenian</option>
+                        <option value="59" ua-label="Asian Fusion">Asian Fusion</option>
+                        <option value="57" ua-label="BBQ">BBQ</option>
+                        <option value="150" ua-label="Bagels">Bagels</option>
+                        <option value="103" ua-label="Bakery">Bakery</option>
+                        <option value="120" ua-label="Beer">Beer</option>
+                        <option value="135" ua-label="Boba">Boba</option>
+                        <option value="38" ua-label="Brazilian">Brazilian</option>
+                      </select>
                   </div>
                 </div>
                 </div>
@@ -196,9 +220,12 @@
     <!-- Geo finder, auto complete -->
     <script src="js/autocomplete.js"></script>
 
+    <!-- jquery multi-select -->
+    <script src="js/jquery.multi-select.js"></script>
 
     <script>
-    $("#restaurant-register").validate();
+      $("#restaurant-register").validate();
+      $('#cuisines').multiSelect()
     </script>
 
 </body>

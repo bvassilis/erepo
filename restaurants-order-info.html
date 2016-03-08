@@ -27,6 +27,7 @@
     </script> 
 
     <div id="head"> </div>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.9/jquery.timepicker.css" rel="stylesheet" type="text/css">
 
 </head>
 
@@ -58,32 +59,118 @@
                 <div class="col-lg-6">
                   <h4>Take Away</h4>
                   <div class="col-xs-12">
-                  <div class="form-group">
-                    <label class="control-label" for="name">Take away hours</label>
-                    <input type="text" class="form-control" name="name" placeholder="Restaurant Name" required>
-                  </div>
+                    <div class="form-group">
+                      <label class="control-label" for="name">Take away hours</label>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-4 nopadding">
+                        <button type="button" class="btn btn-default fullwidth">MONDAY</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-monday-1-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-monday-1-to" placeholder="to">
+                      </div>
+                      <div class="clearfix"> </div>
+                      <div class="col-xs-2 col-xs-offset-2 nopadding-right">
+                        <button type="button" class="btn btn-default fullwidth">AND</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-monday-2-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-monday-2-to" placeholder="to">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-4 nopadding">
+                        <button type="button" class="btn btn-default fullwidth">TUESDAY</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-1-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-1-to" placeholder="to">
+                      </div>
+                      <div class="clearfix"> </div>
+                      <div class="col-xs-2 col-xs-offset-2 nopadding-right">
+                        <button type="button" class="btn btn-default fullwidth">AND</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-2-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-2-to" placeholder="to">
+                      </div>
+                    </div>
                   </div>
                 </div>
                 <div class="clearfix hidden-lg"> </div>
                 <div class="col-lg-6">
                   <h4>Delivery</h4>
                   <div class="col-xs-12">
-                  <div class="form-group">
-                    <label class="control-label" for="contact-name">Minimum Order</label>
-                    <input type="contact-name" class="form-control" name="contact-name" placeholder="Contact Name">
+                    <div class="form-group">
+                      <label class="control-label" for="contact-name">Minimum Order</label>
+                      <input type="contact-name" class="form-control" name="contact-name" placeholder="Contact Name">
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="email">Delivery Charge</label>
+                      <input type="email" class="form-control" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="password">Max area distance converage</label>
+                      <input type="password" class="form-control" name="password" placeholder="Password" required>
+                    </div>
+                    <div class="form-group">
+                      <label class="control-label" for="name">Take away hours</label>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-4 nopadding">
+                        <button type="button" class="btn btn-default fullwidth noradius-right">MONDAY</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick noradius" name="takeaway-monday-1-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick noradius-left" name="takeaway-monday-1-to" placeholder="to">
+                      </div>
+                      <div class="clearfix"> </div>
+                      <div class="col-xs-2 col-xs-offset-2 nopadding-right">
+                        <button type="button" class="btn btn-default fullwidth noradius-right">AND</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick noradius" name="takeaway-monday-2-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick noradius-left" name="takeaway-monday-2-to" placeholder="to">
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <div class="col-xs-4 nopadding">
+                        <button type="button" class="btn btn-default fullwidth">TUESDAY</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-1-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-1-to" placeholder="to">
+                      </div>
+                      <div class="clearfix"> </div>
+                      <div class="col-xs-2 col-xs-offset-2 nopadding-right">
+                        <button type="button" class="btn btn-default fullwidth">AND</button>
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-2-from" placeholder="from">
+                      </div>
+                      <div class="col-xs-4 nopadding">
+                        <input type="text" class="form-control timepick" name="takeaway-tuesday-2-to" placeholder="to">
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-group">
-                    <label class="control-label" for="email">Delivery Charge</label>
-                    <input type="email" class="form-control" name="email" placeholder="Email" required>
-                  </div>
-                  <div class="form-group">
-                    <label class="control-label" for="password">Max area distance converage</label>
-                    <input type="password" class="form-control" name="password" placeholder="Password" required>
-                  </div>
-                </div>
                 </div>                       
-                <div class="col-xs-12 text-center" style="margin: 25px 0 0;">
-                  <button type="submit" class="btn btn-lg btn-primary free-btn">Create Account</button>
+                <div class="col-xs-12 text-center" style="">
+                  <button type="submit" class="btn btn-lg btn-default free-btn final">Create Account</button>
                 </div>
             </form>
             </div>
@@ -158,46 +245,11 @@
     <!-- Custom Theme JavaScript -->
     <script src="js/grayscale.js"></script>
 
-    <!-- Geo finder, auto complete -->
-    <script src="js/autocomplete.js"></script>
 
-    <!-- jquery multi-select -->
-    <script src="js/jquery.multi-select.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-timepicker/1.8.9/jquery.timepicker.js"> </script>
 
     <script>
-      $("#restaurant-register").validate();
-      $('#cuisines').multiSelect({
-         afterSelect: function(values, text){
-            var _self = this;
-
-            // if there are more than 5 elements selected
-            if (this.$element.val().length > 4 ){
-
-              // disable all selectable elements
-              var selectables = this.$container.find('.ms-elem-selectable');
-              selectables.addClass(_self.options.disabledClass);
-
-              // disable all <option>            
-              var options = _self.$element.find('option');
-              options.prop('disabled', true);
-            }
-          },
-          afterDeselect: function(values, text){
-            var _self = this;
-
-            // if there are less than 5 elements selected
-            if (this.$element.val() && this.$element.val().length < 4 ){
-
-              // enable all selectable elements
-              var selectables = this.$container.find('.ms-elem-selectable');
-              selectables.removeClass(_self.options.disabledClass);
-
-              // enable all <option>            
-              var options = _self.$element.find('option');
-              options.prop('disabled', false);
-            }
-          }
-      });
+      $('.timepick').timepicker();
     </script>
 
 </body>

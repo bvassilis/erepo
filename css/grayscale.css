@@ -92,6 +92,26 @@ a.logo:hover i.green {
   padding-right: 0;
   margin-right: 0;
 }
+.nopadding {
+  padding-left: 0;
+  margin-left: 0;
+  padding-right: 0;
+  margin-right: 0;
+}
+.noradius-left {
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+}
+.noradius-right {
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.noradius {
+  border-radius: 0px;
+}
+.fullwidth {
+  width: 100%;
+}
 .navbar-toggle {
   padding: 4px 6px;
   color: #e82c0c;
@@ -778,7 +798,8 @@ body.restaurants.signup header h4,
 body.restaurants.order-info header h4 {
   padding: 50px 0 0;
 }
-body.restaurants.signup button,
-body.restaurants.order-info button {
-  margin-bottom: 50px;
+body.restaurants.signup button.final,
+body.restaurants.order-info button.final {
+  margin: 25px 0 50px;
+  width: 33%;
 }

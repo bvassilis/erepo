@@ -106,6 +106,31 @@ a {
    margin-right: 0;
 }
 
+.nopadding {
+   padding-left: 0;
+   margin-left: 0;
+   padding-right: 0;
+   margin-right: 0;
+}
+
+.noradius-left {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+}
+
+.noradius-right {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+}
+
+.noradius {
+    border-radius: 0px;
+}
+
+.fullwidth {
+    width:100%;
+}
+
 .navbar-toggle {
     padding: 4px 6px;
     color: @orange;
@@ -812,7 +837,8 @@ body.restaurants.signup, body.restaurants.order-info {
         padding: 50px 0 0;
     }
 
-    button {
-        margin-bottom: 50px;
+    button.final {
+        margin: 25px 0 50px;
+        width: 33%;
     }
 }
